@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkyCast Weather App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand">
+          <div class="logo">☁️</div>
+          <div>
+            <span class="brand-name">SkyCast</span>
+            <span class="brand-subtitle">Weather for every city</span>
+          </div>
+        </div>
+
+        <div class="search-panel">
+          <input id="city-input" type="text" placeholder="Search city, e.g. Paris" />
+          <button id="search-button">Search</button>
+        </div>
+      </header>
+
+      <main class="content">
+        <section id="status" class="status">Search for a city to view the weather report.</section>
+
+        <section id="hero-panel" class="hero-panel hidden">
+          <div class="hero-left">
+            <div class="hero-label">Forecast</div>
+            <h1 id="location"></h1>
+            <p id="local-time" class="hero-time"></p>
+            <div class="hero-conditions">
+              <div class="hero-temp" id="temperature"></div>
+              <div>
+                <div id="description" class="hero-desc"></div>
+                <div id="temp-range" class="hero-range"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-right">
+            <div class="stat-card">
+              <div class="stat-label">Feels like</div>
+              <div id="feels-like" class="stat-value"></div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Humidity</div>
+              <div id="humidity" class="stat-value"></div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Wind</div>
+              <div id="wind" class="stat-value"></div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Pressure</div>
+              <div id="pressure" class="stat-value"></div>
+            </div>
+          </div>
+        </section>
+
+        <section id="highlights-panel" class="highlights-panel hidden">
+          <div class="highlight-card">
+            <span>UV Index</span>
+            <strong id="uv-index">--</strong>
+          </div>
+          <div class="highlight-card">
+            <span>Visibility</span>
+            <strong id="visibility">--</strong>
+          </div>
+          <div class="highlight-card">
+            <span>Precipitation</span>
+            <strong id="precipitation">--</strong>
+          </div>
+          <div class="highlight-card">
+            <span>Air Quality</span>
+            <strong id="aqi">--</strong>
+          </div>
+        </section>
+
+        <section id="hourly-panel" class="panel hidden">
+          <div class="panel-header">
+            <h2>Hourly forecast</h2>
+          </div>
+          <div id="hourly-list" class="hourly-list"></div>
+        </section>
+
+        <section id="daily-panel" class="panel hidden">
+          <div class="panel-header">
+            <h2>7-day forecast</h2>
+          </div>
+          <div id="daily-list" class="daily-list"></div>
+        </section>
+
+        <section id="details-panel" class="panel hidden">
+          <div class="panel-header">
+            <h2>Weather details</h2>
+          </div>
+          <div class="details-grid">
+            <div class="detail-card"><span>Wind dir</span><strong id="wind-direction">--</strong></div>
+            <div class="detail-card"><span>Dew point</span><strong id="dew-point">--</strong></div>
+            <div class="detail-card"><span>Sunrise</span><strong id="sunrise">--</strong></div>
+            <div class="detail-card"><span>Sunset</span><strong id="sunset">--</strong></div>
+            <div class="detail-card"><span>Cloud cover</span><strong id="cloud-cover">--</strong></div>
+            <div class="detail-card"><span>Timezone</span><strong id="timezone">--</strong></div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
