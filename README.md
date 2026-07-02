@@ -1,3 +1,5 @@
+<img width="1240" height="2333" alt="FSDL2-M1" src="https://github.com/user-attachments/assets/dcc3e71e-52b4-4b1c-a488-fef10e9537d6" />
+
 # SkyCast — Weather Forecast
 
 SkyCast is a weather dashboard built with plain HTML, CSS, JavaScript, and Node.js.
